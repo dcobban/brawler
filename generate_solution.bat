@@ -11,11 +11,10 @@ GOTO PROJECT_GENERATE
 echo Generating VS2017 Projects
 cd build
 cmake -Wno-dev -G "Visual Studio 15 2017 Win64" ..
-GOTO PROJECT_BUILD
+GOTO OPEN_SOLUTION
 
-:PROJECT_BUILD
-echo Building '%project_dir%'
-cmake --build . --config Debug
+:OPEN_SOLUTION
+rem cmake --open . 
 GOTO EXIT_BUILD
 
 :EXIT_BUILD
